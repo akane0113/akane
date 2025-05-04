@@ -1,134 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AnimeVerse Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARDASH | Military-Grade Fitness Transformation</title>
+    <style>
+        /* ====== HARDASH Design System ====== */
+        :root {
+            --black: #0D0D0D;
+            --red: #FF2E2E;
+            --gray: #1A1A1A;
+            --light: #E6E6E6;
+            --font-main: 'Rajdhani', 'Inter', sans-serif;
+            --font-heading: 'Bebas Neue', 'Impact', sans-serif;
+        }
 
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      background-size: 400% 400%;
-      animation: gradientMove 10s ease infinite;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+        /* ====== Base Styles ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      margin-top: 2rem;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    h1 {
-      font-size: 2.8rem;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-      animation: shine 2s linear infinite;
-    }
+        body {
+            font-family: var(--font-main);
+            color: var(--light);
+            background-color: var(--black);
+            line-height: 1.7;
+            font-weight: 500;
+        }
 
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 1rem auto;
-      animation: shine 2s linear infinite;
-    }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
 
-    .form-box {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
-      border-radius: 20px;
-      margin-top: 2rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(10px);
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    input {
-      display: block;
-      width: 100%;
-      max-width: 300px;
-      margin: 1rem auto;
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: none;
-      font-size: 1rem;
-      background: rgba(255, 255, 255, 0.2);
-      color: #fff;
-    }
+        section {
+            padding: 100px 0;
+        }
 
-    button {
-      background: #ff3cac;
-      border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 8px;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    button:hover {
-      background: #ff6ec4;
-    }
+        /* ====== Header ====== */
+        header {
+            background: var(--black);
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,46,46,0.2);
+        }
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    /* Shine animation */
-    @keyframes shine {
-      0% {
-        text-shadow: 0 0 10px #ff3cac, 0 0 20px #ff3cac, 0 0 30px #ff3cac, 0 0 40px #ff3cac;
-      }
-      100% {
-        text-shadow: 0 0 10px #0072ff, 0 0 20px #0072ff, 0 0 30px #0072ff, 0 0 40px #0072ff;
-      }
-    }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--red);
+            text-decoration: none;
+            letter-spacing: 3px;
+        }
 
-    /* Gradient movement */
-    @keyframes gradientMove {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  </style>
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: rgba(230,230,230,0.9);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:hover {
+            color: var(--red);
+        }
+
+        .nav-cta {
+            background: var(--red);
+            color: var(--black) !important;
+            padding: 12px 24px;
+            font-weight: 700 !important;
+            border: 2px solid var(--red);
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: transparent;
+            color: var(--red) !important;
+            transform: translateY(-3px);
+        }
+
+        /* ====== Hero Section ====== */
+        .hero {
+            background: linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.9)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--black), transparent);
+        }
+
+        .hero h1 {
+            font-size: 82px;
+            margin-bottom: 20px;
+            line-height: 0.9;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            color: var(--red);
+            display: block;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 36px;
+            border-radius: 2px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--black);
+            border: 2px solid var(--red);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--red);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        /* ====== Lead Form ====== */
+        .lead-form {
+            background: var(--gray);
+            padding: 50px;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 500px;
+            margin: -80px auto 0;
+            position: relative;
+            z-index: 10;
+            border-top: 4px solid var(--red);
+        }
+
+        .form-title {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: var(--red);
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 18px 25px;
+            border: 1px solid #333;
+            border-radius: 2px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: var(--black);
+            color: var(--light);
+            font-weight: 500;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(255,46,46,0.2);
+        }
+
+        /* ====== Features ====== */
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title h2 {
+            font-size: 52px;
+            color: var(--light);
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+        }
+
+        .section-title h2 span {
+            color: var(--red);
+        }
+
+        .section-title p {
+            color: rgba(230,230,230,0.7);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--gray);
+            border-radius: 2px;
+            padding: 50px 30px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            text-align: center;
+            border-top: 4px solid var(--red);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,46,46,0.1);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 36px;
+            color: var(--red);
+        }
+
+        .feature-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--light);
+            letter-spacing: 2px;
+        }
+
+        .feature-card p {
+            opacity: 0.8;
+        }
+
+        /* ====== Program Details ====== */
+        .program-details {
+            background: linear-gradient(135deg, var(--black) 0%, var(--gray) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.03;
+            z-index: 1;
+        }
+
+        .program-details .section-title h2 {
+            color: var(--light);
+        }
+
+        .details-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .details-list {
+            display: grid;
+            gap: 30px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .detail-icon {
+            font-size: 28px;
+            color: var(--red);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .detail-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--light);
+            letter-spacing: 2px;
+        }
+
+        .detail-content p {
+            opacity: 0.8;
+        }
+
+        .program-image {
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,46,46,0.2);
+        }
+
+        /* ====== Testimonials ====== */
+        .testimonials {
+            background: var(--gray);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--black);
+            border-radius: 2px;
+            padding: 50px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            border-top: 4px solid var(--red);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 100px;
+            color: rgba(255,46,46,0.1);
+            font-family: serif;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            position: relative;
+            font-size: 18px;
+            line-height: 1.7;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 2px;
+            object-fit: cover;
+            margin-right: 20px;
+            border: 2px solid var(--red);
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--light);
+            letter-spacing: 1px;
+        }
+
+        .author-info p {
+            color: rgba(230,230,230,0.6);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* ====== CTA Section ====== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--black) 0%, var(--gray) 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.03;
+            z-index: 1;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .cta-section h2 span {
+            color: var(--red);
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 20px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+
+        /* ====== Footer ====== */
+        footer {
+            background: var(--black);
+            color: white;
+            padding: 100px 0 50px;
+            border-top: 1px solid rgba(255,46,46,0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+            color: var(--red);
+            letter-spacing: 3px;
+        }
+
+        .footer-about p {
+            opacity: 0.7;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: var(--light);
+            font-size: 24px;
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--red);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--light);
+            letter-spacing: 2px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links ul li a {
+            color: rgba(230,230,230,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--red);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .copyright {
+            opacity: 0.5;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* ====== Responsive Styles ====== */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 72px;
+            }
+            
+            .section-title h2 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 62px;
+            }
+            
+            .details-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .program-image {
+                order: -1;
+                max-width: 600px;
+                margin: 0 auto 50px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 30px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 15px 15px;
+            }
+            
+            .hero {
+                padding: 180px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 52px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .lead-form {
+                margin-top: 0;
+                padding: 40px 30px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .feature-card {
+                padding: 40px 20px;
+            }
+            
+            .testimonial-card {
+                padding: 40px 30px;
+            }
+            
+            .cta-section h2 {
+                font-size: 42px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>AnimeVerse 🎮</h1>
-    <p>Enter the colorful world of anime gaming! Get early access, community rewards, and more by joining now.</p>
-  </header>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">HARD<span>ASH</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#science">Science</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#get-started" class="nav-cta">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="form-box">
-    <form action="#" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <input type="password" name="password" placeholder="Create a password" required />
-      <button type="submit">Join the Portal</button>
-    </form>
-  </div>
+    <!-- Hero Section -->
+    <section class="hero" id="get-started">
+        <div class="container">
+            <h1>NO BULLSHIT <span>BODY TRANSFORMATION</span></h1>
+            <p>The last fitness program you'll ever need. Military-grade protocols adapted for maximum results in minimal time.</p>
+            <div class="hero-btns">
+                <a href="#lead-form" class="btn btn-primary">GET YOUR PLAN</a>
+                <a href="#program" class="btn btn-secondary">HOW IT WORKS</a>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    &copy; 2025 AnimeVerse. All rights reserved.
-  </footer>
+    <!-- Lead Form -->
+    <div class="container">
+        <form class="lead-form" id="lead-form" action="[YOUR_CPA_POST_LINK]" method="POST">
+            <h3 class="form-title">DOWNLOAD YOUR <span>FREE</span> 28-DAY STARTER KIT</h3>
+            <div class="form-group">
+                <input type="text" class="form-control" name="first_name" placeholder="FIRST NAME" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="EMAIL" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-download"></i> GET INSTANT ACCESS
+                </button>
+            </div>
+            <p style="font-size: 12px; text-align: center; margin-top: 20px; opacity: 0.6; letter-spacing: 1px;">
+                We respect your privacy. Unsubscribe at any time. No spam, ever.
+            </p>
+        </form>
+    </div>
+
+    <!-- Features Section -->
+    <section id="program">
+        <div class="container">
+            <div class="section-title">
+                <h2>THE <span>HARDASH</span> DIFFERENCE</h2>
+                <p>What makes our system more effective than 99% of fitness programs</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3 class="feature-title">Brutal Efficiency</h3>
+                    <p>We've stripped away all fluff - every exercise and protocol serves a specific, measurable purpose</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Adaptive Resistance</h3>
+                    <p>Progressive overload algorithms that automatically adjust to your capability level</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">Minimal Time Commitment</h3>
+                    <p>45 minutes, 4x/week is all it takes to see dramatic transformations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Details -->
+    <section class="program-details" id="science">
+        <div class="container">
+            <div class="section-title">
+                <h2>SCIENCE <span>MEETS</span> RESULTS</h2>
+                <p>Backed by special operations training protocols and clinical research</p>
+            </div>
+            <div class="details-container">
+                <div class="details-list">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h3>STRENGTH FIRST</h3>
+                            <p>Compound movements form the foundation of all programming</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h3>METABOLIC CONDITIONING</h3>
+                            <p>Precision energy system training to optimize fat utilization</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="detail-content">
+                            <h3>NEUROMUSCULAR PROGRAMMING</h3>
+                            <p>Develop explosive power and bulletproof joints</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="HARDASH Training">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="results">
+        <div class="container">
+            <div class="section-title">
+                <h2>REAL <span>RESULTS</span></h2>
+                <p>From special operators to CEOs - the system works for anyone willing to put in the work</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>After 12 years in special forces, I thought I knew everything about training. HARDASH showed me how wrong I was. Added 22lbs to my bench and cut my 5-mile time by 90 seconds in 12 weeks.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jake M." class="author-avatar">
+                        <div class="author-info">
+                            <h4>JAKE M.</h4>
+                            <p>SPECIAL OPERATIONS VETERAN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>As a surgeon working 80-hour weeks, I needed maximum efficiency. HARDASH delivered better results in 3 months than I got in 3 years of CrossFit. Lost 28lbs while getting stronger.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Dr. Sarah K." class="author-avatar">
+                        <div class="author-info">
+                            <h4>DR. SARAH K.</h4>
+                            <p>TRAUMA SURGEON</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>At 52, I was ready to accept "middle-age spread" as inevitable. The HARDASH system proved me wrong. Now I'm stronger than I was at 30 and finally have visible abs for the first time in my life.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mark T." class="author-avatar">
+                        <div class="author-info">
+                            <h4>MARK T.</h4>
+                            <p>FOUNDER & CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="testimonials">
+        <div class="container cta-container">
+            <h2>READY TO <span>TRANSFORM</span>?</h2>
+            <p>Join the 18,000+ athletes, operators, and professionals who've rebuilt their bodies with HARDASH</p>
+            <a href="#lead-form" class="btn btn-primary" style="max-width: 300px; margin: 0 auto;">
+                START TODAY
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">HARDASH</a>
+                    <p>Brutally effective fitness systems for those who demand results.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>PROGRAMS</h3>
+                    <ul>
+                        <li><a href="#">OPERATOR PROTOCOL</a></li>
+                        <li><a href="#">TACTICAL ATHLETE</a></li>
+                        <li><a href="#">ELITE FAT LOSS</a></li>
+                        <li><a href="#">JOINT RESILIENCE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>RESOURCES</h3>
+                    <ul>
+                        <li><a href="#">RESEARCH PAPERS</a></li>
+                        <li><a href="#">EXERCISE LIBRARY</a></li>
+                        <li><a href="#">PODCAST</a></li>
+                        <li><a href="#">NUTRITION GUIDES</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">COACHING TEAM</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2023 HARDASH PERFORMANCE SYSTEMS. ALL RIGHTS RESERVED.</p>
+                <p style="font-size: 12px; opacity: 0.3; margin-top: 10px; letter-spacing: 1px;">DISCLAIMER: RESULTS VARY BASED ON EFFORT AND CONSISTENCY. CONSULT YOUR PHYSICIAN BEFORE BEGINNING ANY EXERCISE PROGRAM.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
